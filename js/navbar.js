@@ -5,7 +5,7 @@ class MiNavbar extends HTMLElement {
        <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#inicio">
+      <a class="navbar-brand" href="index.html">
         <img src="Images/Untitled-removebg-preview.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
         Neotech Store
       </a>
@@ -18,8 +18,8 @@ class MiNavbar extends HTMLElement {
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
           <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
-          <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html" id="loginLink">Login</a></li>          
         </ul>
         <div id="userIconContainer" class="d-flex align-items-center"></div>
