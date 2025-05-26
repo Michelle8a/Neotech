@@ -15,7 +15,7 @@ class MiNavbar extends HTMLElement {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
           <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
