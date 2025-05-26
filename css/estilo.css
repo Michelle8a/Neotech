@@ -1,0 +1,91 @@
+:root {
+    --color-1: #0F1A2B;
+    --color-2: #1C2E4A;
+    --color-3: #52677D;
+    --color-4: #BDC4D4;
+    --color-5: #D1CFC9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    padding-top: 70px;
+}
+
+.navbar {
+    background-color: var(--color-2);
+}
+
+.nav-link,
+.navbar-brand {
+    color: var(--color-5) !important;
+}
+
+.card {
+    background-color: var(--color-2);
+    color: var(--color-5);
+    border: 3px solid #000;
+    border-radius: 50px;
+    padding: 13px;
+}
+
+.card-body {
+    color: var(--color-1);
+}
+
+.btn-primary {
+    background-color: var(--color-3);
+    border-color: var(--color-3);
+}
+
+footer {
+    background-color: var(--color-2);
+    color: var(--color-5);
+    padding: 1rem;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.producto-sm {
+    max-width: 250px;
+    font-size: 0.9rem;
+    margin-bottom: 1px;
+}
+
+.producto-sm .card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.size {
+    width: 400px;
+}
+
+.nav-item {
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    background-color: var(--color-3);
+    color: var(--color-1);
+}
+
+.carousel-item {
+    background-color: white;
+    color: var(--color-5);
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 14px;
+}

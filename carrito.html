@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="./css/estilo.css">
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    table {
+      background-color: #1e1e1e;
+    }
+
+    .btn-info {
+      background-color: #0dcaf0;
+    }
+  </style>
+
+  <!-- NAVBAR -->
+  <script src="./js/navbar.js" defer></script>
+  <!-- FOOTER -->
+  <script src="./js/footer.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navbar personalizado -->
+  <mi-navbar></mi-navbar>
+
+  <div class="container py-5">
+    <h2 class="text-info mb-4">Tu Carrito</h2>
+    <table class="table table-dark table-bordered text-center">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-carrito">
+        <!-- Aquí se cargarán los productos -->
+      </tbody>
+    </table>
+    <h4 class="text-end text-white">Total: <span id="total" class="text-info">$0.00</span></h4>
+  </div>
+
+  <div class="text-center mb-5">
+    <button type="button" class="btn btn-primary btn-lg">Proceder A Pagar</button>
+    <button type="button" class="btn btn-secondary btn-lg">Cancelar</button>
+  </div>
+
+  <!-- Footer personalizado -->
+  <mi-footer></mi-footer>
+
+  <!-- Scripts -->
+  <script>
+    const tabla = document.getElementById("tabla-carrito");
+    const totalSpan = document.getElementById("total");
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let total = 0;
+
+    carrito.forEach(p => {
+      const subtotal = p.precio * p.cantidad;
+      total += subtotal;
+
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+        <td>${p.nombre}</td>
+        <td>$${p.precio.toFixed(2)}</td>
+        <td>${p.cantidad}</td>
+        <td>$${subtotal.toFixed(2)}</td>
+        <td><button class="btn btn-sm btn-outline-danger eliminar" data-id="${p.id}">Eliminar</button></td>
+      `;
+      tabla.appendChild(fila);
+    });
+
+    totalSpan.textContent = `$${total.toFixed(2)}`;
+
+    document.querySelectorAll(".eliminar").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.id;
+        carrito = carrito.filter(p => p.id !== id);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        location.reload();
+      });
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Neotech Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!--CSS-->
+  <link rel="stylesheet" href="./css/estilo.css">
+  <!--NAVBAR-->
+  <script src="./js/navbar.js" defer></script>
+  <!--FOOTER-->
+  <script src="./js/footer.js" defer></script>
+  <style>
+    .product-card {
+      background-color: #1C2E4A;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      color: #D1CFC9;
+    }
+
+    .carousel img {
+      border-radius: 15px;
+    }
+
+    .btn-cart {
+      background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+      color: #0F1A2B;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-cart:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #92FE9D;
+    }
+
+    .breadcrumb {
+      color: #D1CFC9;
+    }
+
+    .table {
+      background-color: #223B5C;
+      color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .table th {
+      background-color: #1A2C46;
+      color: #00C9FF;
+    }
+  </style>
+
+  <mi-navbar></mi-navbar>
+
+  <div class="container my-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-info">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="tienda.html" class="text-decoration-none text-info">Categorías</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Computadoras</li>
+      </ol>
+    </nav>
+
+    <div class="row g-5">
+      <!-- Imagen -->
+      <div class="col-md-6">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Images/81hH5vK-MCL._AC_SL1500_.jpg" class="d-block w-100" alt="Imagen Ilustrativa">
+            </div>
+            <div class="carousel-item">
+              <img src="Images/81hH5vK-MCL._AC_SL1500_.jpg" class="d-block w-100" alt="Imagen Ilustrativa">
+            </div>
+            <div class="carousel-item">
+              <img src="Images/81hH5vK-MCL._AC_SL1500_.jpg" class="d-block w-100" alt="Imagen Ilustrativa">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Información del producto -->
+      <div class="col-md-6">
+        <div class="product-card">
+          <h3 class="mb-3">Laptop 15-EG0501LA Pavilion | Core™ i5</h3>
+          <p>Increíble desempeño en una laptop más pequeña para que puedas hacer más y disfrutar del entretenimiento donde quiera que vayas. <br>
+        Caracteristicas</p>
+          <ul>
+            <li>Pantalla FHD IPS, con microborde en tres lados</li>
+            <li>250 nits y 45% de NTSC</li>
+            <li>Almacenamiento en unidad de estado sólido PCIe</li>
+            <li>Chipset - SoC integrado Intel®</li>
+            <li>Integrada: Gráficos Intel® Iris® Xᵉ</li>
+            <li>Apaga tu dispositivo y eleva su batería de 0 al 50 % en aproximadamente 45 minutos</li>
+            <li>Lector de huellas</li>
+            <li>Bluetooth®</li>
+          </ul>
+          <button class="btn btn-info w-100 add-to-cart" data-id="1" data-nombre="Laptop 15-EG0501LA Pavilion | Core™ i5"
+            data-precio="899.99">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Especificaciones -->
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto">
+        <h4 class="text-center mb-3">Especificaciones Técnicas</h4>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th>Sistema operativo</th>
+              <td>Windows 11 Home</td>
+            </tr>
+            <tr>
+              <th>Memoria RAM</th>
+              <td>8GB</td>
+            </tr>
+            <tr>
+              <th>Duración de bateria aproximado</th>
+              <td>Hasta 8 horas</td>
+            </tr>
+            <tr>
+              <th>Tipo (Laptop/Escritorio)</th>
+              <td>Laptop</td>
+            </tr>
+            <tr>
+              <th>Cantidad de Puertos USB</th>
+              <td>1 Type-C®, 2 Tipo-A</td>
+            </tr>
+            <tr>
+              <th>Camara web integrada</th>
+              <td>HD HP Wide Vision de 720p</td>
+            </tr>
+            <tr>
+              <th>Tamaño de Pantalla</th>
+              <td>15.6"</td>
+            </tr>
+            <tr>
+              <th>Salida HDMI</th>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>Disco duro</th>
+              <td>Unidad de estado sólido de 512 GB PCIe® NVMe™ M.2</td>
+            </tr>
+            <tr>
+              <th>Velocidad de procesador</th>
+              <td>Hasta 4,2 GHz con tecnología Intel® Turbo Boost</td>
+            </tr>
+            <tr>
+              <th>Tipo de procesador</th>
+              <td>Intel® Core™ i5-1135G7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".add-to-cart").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.id;
+        const nombre = btn.dataset.nombre;
+        const precio = parseFloat(btn.dataset.precio);
+
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        const existe = carrito.find(p => p.id === id);
+        if (existe) {
+          existe.cantidad += 1;
+        } else {
+          carrito.push({ id, nombre, precio, cantidad: 1 });
+        }
+
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        alert("Producto agregado al carrito");
+      });
+    });
+  </script>
+
+
+  <!-- Pie de pagina -->
+  <mi-footer></mi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</html>
