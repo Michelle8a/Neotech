@@ -253,14 +253,19 @@
 </script>
 
 
-
+<!--Buscador de productos-->
 <script>
   document.getElementById("buscador").addEventListener("keyup", function() {
-    const texto = this.value.toLowerCase();
+    const texto = this.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // normaliza el texto
+    
     const productos = document.querySelectorAll(".producto");
 
     productos.forEach(producto => {
-      const titulo = producto.querySelector(".card-title").textContent.toLowerCase();
+      const titulo = producto.querySelector(".card-title").textContent
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, ""); // normaliza el titulo
+      
       if (titulo.includes(texto)) {
         producto.style.display = "block"; 
       } else {
