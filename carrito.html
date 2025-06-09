@@ -64,7 +64,7 @@
 
   <div class="text-center mb-5">
     <button type="button" class="btn btn-primary btn-lg" onclick="mostrarFormularioPago()">Proceder A Pagar</button>
-    <button type="button" class="btn btn-secondary btn-lg">Cancelar</button>
+    <button type="button" class="btn btn-secondary btn-lg" onclick="Cancelar()>Cancelar</button>
   </div>
 
   <div id="formulario-pago" class="container mt-5" style="display: none;">
@@ -158,6 +158,17 @@
         document.getElementById("formulario-pago").style.display = "none";
       });
     });
+
+    function Cancelar(){
+      //Limpia el carrito
+        localStorage.removeItem("carrito");
+        carrito = [];
+
+        //Limpia la tabla
+        tabla.innerHTML = "";
+
+        totalSpan.textContent = "$0.00";
+    }
   </script>
 
 
